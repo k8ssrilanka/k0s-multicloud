@@ -1,7 +1,7 @@
 # k0s-multicloud
 **Up and Running k0s across Multicloud**
 
-**Setup of Control Plane**
+**Setup of Control Plane on GCP**
 TBA
 
 **Setup of Workload Node1 on iMac**
@@ -10,5 +10,5 @@ TBA
 **Setup of Workload Node2 on DigitalOcean**
 TBA
 
-**Setup of Workload Node2 on DigitalOcean**
+**Setup of Workload Node2 on GCP**
 TBA
