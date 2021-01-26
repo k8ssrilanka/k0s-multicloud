@@ -8,9 +8,17 @@ to run the following installation command<br>
 
 **Setup of Workload Node1 on iMac**</br>
 Pre-requisits: Please ensure that you have already installed Multipass on your iMac (Ref:  https://medium.com/platformer-blog/up-and-running-k3s-with-multipass-on-imac-or-macbook-pro-bee069247cc0) <br>
+Open a terminal and type in the following command to create a virtual machine using Multipass<br>
 
-**Setup of Workload Node2 on DigitalOcean**
-TBA
+#multipass launch --name k0s-workload-node1 --cpus 2 --mem 2GB --disk 10GB focal
 
-**Setup of Workload Node2 on GCP**
-TBA
+Update and upgrade if required<br>
+#sudo curl -sSLf k0s.sh | sudo sh
+
+**Setup of Workload Node2 on DigitalOcean**<br>
+ssh to the virtual machine you have just created <br>
+#sudo curl -sSLf k0s.sh | sudo sh
+
+**Setup of Workload Node2 on GCP**<br>
+ssh to the virtual machine you have just created <br>
+#sudo curl -sSLf k0s.sh | sudo sh
