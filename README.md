@@ -8,13 +8,25 @@ Update and upgrade if required AND reboot<br>
 #sudo apt update && sudo apt upgrade -y && sudo reboot<br>
 
 After the reboot run the following command to download k0s binary and install it<br>
-#sudo curl -sSLf k0s.sh | sudo sh
+#sudo curl -sSLf k0s.sh | sudo sh<br>
+
+Run k0s as a server in the background, in a production envrionment you would setup with systemd service<br>
+#sudo sudo k0s server </dev/null &>/dev/null & <br>
+
+Take a copy of the kubernetes configuration to run locally or on your PC (this example shows that I am running it locally)<br>
+First install kubectl<br>
+#sudo sanp install kubectl<br>
+
+Copy the config file and setup envrionment variable<br>
+#sudo cp /var/lib/k0s/pki/admin.conf ~/admin.conf<br>
+#export KUBECONFIG=~/admin.conf<br>
 
 **Setup of Workload Dev on iMac**</br>
 Pre-requisits: Please ensure that you have already installed Multipass on your iMac (Ref:  https://medium.com/platformer-blog/up-and-running-k3s-with-multipass-on-imac-or-macbook-pro-bee069247cc0) <br>
 Open a terminal and type in the following command to create a virtual machine using Multipass<br>
 
-#multipass launch --name k0s-workload-node1 --cpus 2 --mem 2GB --disk 10GB focal
+#multipass launch --name k0s-dev-node1 --cpus 2 --mem 2GB --disk 10GB focal<br>
+#multipass shell k0s-dev-node1<br>
 
 Update and upgrade if required AND reboot<br>
 #sudo apt update && sudo apt upgrade -y && sudo reboot<br>
