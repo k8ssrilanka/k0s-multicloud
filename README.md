@@ -15,13 +15,13 @@ Run k0s as a server in the background, in a production envrionment you would set
 
 Take a copy of the kubernetes configuration to run locally or on your PC (this example shows that I am running it locally)<br>
 First install kubectl<br>
-#sudo sanp install kubectl<br>
+#sudo snap install kubectl --classic<br>
 
 Copy the config file and setup envrionment variable<br>
 #sudo cp /var/lib/k0s/pki/admin.conf admin.conf<br>
 #export KUBECONFIG=admin.conf<br>
 
-Test to make sure you can see the cluster nodes, at this stage you should not have any cluster nodes. However it should connect to the control plane to provide yoi an answer <br>
+Test to make sure you can see the cluster nodes, at this stage you should not have any cluster nodes. However it should connect to the control plane to provide you an answer "no resources found"<br>
 #kubectl get nodes -o wide<br>
 
 Create the token for workload nodes to connect<br>
@@ -60,3 +60,5 @@ Update and upgrade if required AND reboot<br>
 
 Connect to the control plane with the token created<br>
 #sudo k0s worker --token-file workload-token.txt<br>
+
+TBA - Webinar questions and Answers
