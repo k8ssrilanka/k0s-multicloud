@@ -31,5 +31,5 @@ Update and upgrade if required AND reboot<br>
 **Setup of Workload Prodution on GCP**<br>
 ssh to the virtual machine you have just created <br>
 Update and upgrade if required AND reboot<br>
-#sudo apt update && sudo apt upgrade -y && sudo reboot
+#sudo apt update && sudo apt upgrade -y && sudo reboot<br>
 #sudo curl -sSLf k0s.sh | sudo sh
