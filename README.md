@@ -10,7 +10,7 @@ Update and upgrade if required AND reboot<br>
 After the reboot run the following command to download k0s binary and install it<br>
 #sudo curl -sSLf k0s.sh | sudo sh
 
-**Setup of Workload Node1 on iMac**</br>
+**Setup of Workload Dev on iMac**</br>
 Pre-requisits: Please ensure that you have already installed Multipass on your iMac (Ref:  https://medium.com/platformer-blog/up-and-running-k3s-with-multipass-on-imac-or-macbook-pro-bee069247cc0) <br>
 Open a terminal and type in the following command to create a virtual machine using Multipass<br>
 
@@ -22,10 +22,14 @@ Update and upgrade if required AND reboot<br>
 After the reboot run the following command to download k0s binary and install it<br>
 #sudo curl -sSLf k0s.sh | sudo sh
 
-**Setup of Workload Node2 on DigitalOcean**<br>
+**Setup of Workload Test on GCP**<br>
 ssh to the virtual machine you have just created <br>
+Update and upgrade if required AND reboot<br>
+#sudo apt update && sudo apt upgrade -y && sudo reboot
 #sudo curl -sSLf k0s.sh | sudo sh
 
-**Setup of Workload Node2 on GCP**<br>
+**Setup of Workload Prodution on GCP**<br>
 ssh to the virtual machine you have just created <br>
+Update and upgrade if required AND reboot<br>
+#sudo apt update && sudo apt upgrade -y && sudo reboot
 #sudo curl -sSLf k0s.sh | sudo sh
