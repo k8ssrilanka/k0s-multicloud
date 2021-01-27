@@ -18,8 +18,14 @@ First install kubectl<br>
 #sudo sanp install kubectl<br>
 
 Copy the config file and setup envrionment variable<br>
-#sudo cp /var/lib/k0s/pki/admin.conf ~/admin.conf<br>
-#export KUBECONFIG=~/admin.conf<br>
+#sudo cp /var/lib/k0s/pki/admin.conf admin.conf<br>
+#export KUBECONFIG=admin.conf<br>
+
+Test to make sure you can see the cluster nodes, at this stage you should not have any cluster nodes. However it should connect to the control plane to provide yoi an answer <br>
+#kubectl get nodes -o wide<br>
+
+Create the token for workload nodes to connect<br>
+#k0s token create --role=worker > workload-token.txt<br>
 
 **Setup of Workload Dev on iMac**</br>
 Pre-requisits: Please ensure that you have already installed Multipass on your iMac (Ref:  https://medium.com/platformer-blog/up-and-running-k3s-with-multipass-on-imac-or-macbook-pro-bee069247cc0) <br>
@@ -32,7 +38,10 @@ Update and upgrade if required AND reboot<br>
 #sudo apt update && sudo apt upgrade -y && sudo reboot<br>
 
 After the reboot run the following command to download k0s binary and install it<br>
-#sudo curl -sSLf k0s.sh | sudo sh
+#sudo curl -sSLf k0s.sh | sudo sh<br>
+
+Connect to the control plane with the token created<br>
+#sudo k0s worker --token-file workload-token.txt<br>
 
 **Setup of Workload Test on GCP**<br>
 ssh to the virtual machine you have just created <br>
@@ -40,8 +49,14 @@ Update and upgrade if required AND reboot<br>
 #sudo apt update && sudo apt upgrade -y && sudo reboot<br>
 #sudo curl -sSLf k0s.sh | sudo sh
 
+Connect to the control plane with the token created<br>
+#sudo k0s worker --token-file workload-token.txt<br>
+
 **Setup of Workload Prodution on GCP**<br>
 ssh to the virtual machine you have just created <br>
 Update and upgrade if required AND reboot<br>
 #sudo apt update && sudo apt upgrade -y && sudo reboot<br>
 #sudo curl -sSLf k0s.sh | sudo sh
+
+Connect to the control plane with the token created<br>
+#sudo k0s worker --token-file workload-token.txt<br>
