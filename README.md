@@ -1,9 +1,13 @@
 # k0s-multicloud
 **Up and Running k0s across Multicloud**
 
-**Setup of Control Plane on GCP**<br>
-Once you have created your virtual machine on GCP (GCE - in my example I have created a 2 x CPU, 4GB and 50GB disk instance with Ubuntu 20.04 LTS) ssh to the server
+**Setup of Control Plane on DigitalOcen**<br>
+Once you have created your virtual machine on DO (Droplets - in my example I have created a 2 x CPU, 4GB and 80GB disk instance with Ubuntu 18.04 LTS) ssh to the server
 to run the following installation command<br>
+Update and upgrade if required AND reboot<br>
+#sudo apt update && sudo apt upgrade -y && sudo reboot
+
+After the reboot run the following command to download k0s binary and install it<br>
 #sudo curl -sSLf k0s.sh | sudo sh
 
 **Setup of Workload Node1 on iMac**</br>
@@ -12,7 +16,10 @@ Open a terminal and type in the following command to create a virtual machine us
 
 #multipass launch --name k0s-workload-node1 --cpus 2 --mem 2GB --disk 10GB focal
 
-Update and upgrade if required<br>
+Update and upgrade if required AND reboot<br>
+#sudo apt update && sudo apt upgrade -y && sudo reboot
+
+After the reboot run the following command to download k0s binary and install it<br>
 #sudo curl -sSLf k0s.sh | sudo sh
 
 **Setup of Workload Node2 on DigitalOcean**<br>
