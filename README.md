@@ -36,7 +36,7 @@ Create the token for workload nodes to connect<br>
 ```
 
 ### Setup of Workload Dev on iMac
-Pre-requisits: Please ensure that you have already installed Multipass on your iMac (Ref:  https://medium.com/platformer-blog/up-and-running-k3s-with-multipass-on-imac-or-macbook-pro-bee069247cc0) <br>
+Pre-requisits: Please ensure that you have already installed [Multipass on your iMac](https://medium.com/platformer-blog/up-and-running-k3s-with-multipass-on-imac-or-macbook-pro-bee069247cc0) <br>
 Open a terminal and type in the following command to create a virtual machine using Multipass<br>
 ```
 #multipass launch --name k0s-dev-node1 --cpus 2 --mem 2GB --disk 10GB focal<br>
@@ -83,5 +83,5 @@ Connect to the control plane with the token created<br>
 [Slides used for the presentation](https://docs.google.com/presentation/d/1ONKz-bXvQuQaL3Zk8PxtfYXtkPPCxG30q3f79WTT57I/edit?usp=sharing)
 
 ### Other References
-[k0s Project Site](TBA)
-[Container Networking] (https://iximiuz.com/en/posts/container-networking-is-simple/)
+[k0s Project Site](https://k0sproject.io/)<br>
+[Container Networking](https://iximiuz.com/en/posts/container-networking-is-simple/)
