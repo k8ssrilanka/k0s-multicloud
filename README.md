@@ -82,9 +82,9 @@ Connect to the control plane with the token created<br>
 [Slides used for the presentation](https://docs.google.com/presentation/d/1ONKz-bXvQuQaL3Zk8PxtfYXtkPPCxG30q3f79WTT57I/edit?usp=sharing)
 
 Q1. If we distribute our applications across multiple cloud providers wont we have latency issues when the service is exposed? <br>
-A1. Short answer is YES. However there are situations where you may need go distribute the application and have geo-based loadbalancing where customers get responses from the closest cluster where the pods are running. The examples I demoed today are more focused on running dev on-premise, test on a low cost cloud and production is a different cloud. 
+A1. Short answer is YES. However there are situations where you may need go distribute the application and have geo-based loadbalancing where customers get responses from the closest cluster where the pods are running. The examples I demoed today are more focused on running dev on-premise, test on a low cost cloud and production is a different cloud. <br>
 
-Q2. How do we overcome the issue with GCP control plane?
+Q2. How do we overcome the issue with GCP control plane?<br>
 A2. I have not figured that out yet, once I have will provide a reply here. 
 
 ### Other References
